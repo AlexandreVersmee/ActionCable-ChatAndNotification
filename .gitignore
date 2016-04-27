@@ -1,2 +1,3 @@
 #Git Ignore des fichiers RubyMine
 ./idea
+/idea
