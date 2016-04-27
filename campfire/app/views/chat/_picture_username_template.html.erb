@@ -1,0 +1,8 @@
+<div class="row user-name-friend-list" data-name="<%= friend.name %>" data-id="<%= friend.id %>">
+  <div class="col-lg-2 col-md-2 col-xs-12" >
+    <%= gravatar_for(friend, size: 30) %>
+  </div>
+  <div class="col-lg-10 col-md-10 col-xs-0 friend_name-chat-list">
+    <%= friend.name %>
+  </div>
+</div>

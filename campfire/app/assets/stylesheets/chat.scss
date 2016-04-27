@@ -1,0 +1,161 @@
+/*
+**      ######################
+**      #                    #
+**      #     Chat main div  #
+**      #                    #
+**      ######################
+*/
+.chat-popup {
+	position           : fixed !important;
+	bottom             : 0;
+	right              : 16.66666667%;
+	margin-right       : 15px;
+	max-height         : 310px;
+	width              : 260px;
+	padding-left       : 0 !important;
+	padding-right      : 0 !important;
+	background-color   : rgb(240, 244, 255);
+	-webkit-box-shadow : 0 1px 1px rgba(0, 0, 0, .3);
+	-moz-box-shadow    : 0 1px 1px rgba(0, 0, 0, .3);
+	box-shadow         : 0 1px 1px rgba(0, 0, 0, .3);
+	display            : none;
+}
+
+.chat-small {
+	height : 26px;
+}
+
+.chat-off {
+	background : #bbbbbb !important;
+	color      : black !important;
+}
+
+/*
+**      ######################
+**      #                    #
+**      #     Chat Header    #
+**      #                    #
+**      ######################
+*/
+.chat-header {
+	background-color : #4E69A1;
+	padding-left     : 7px !important;
+	padding-right    : 5px !important;
+}
+
+.highlight {
+	background-color : #238ed7;
+}
+
+.chat-user-name {
+	height      : 26px;
+	font-size   : 1.05rem;
+	padding-top : 5px;
+	color       : white;
+}
+
+/*
+**      ######################
+**      #                    #
+**      #     Content div    #
+**      #                    #
+**      ######################
+*/
+.chat-content {
+	border       : solid grey;
+	border-width : 0 1px 0 1px;
+	font-size    : 1.2rem;
+	padding      : 5px 5px !important;
+	height       : 254px;
+	display      : none;
+	overflow-y   : scroll;
+}
+
+.receiver,
+.sender {
+	border-radius : 1.5rem;
+	padding       : 3px 5px;
+}
+
+.receiver {
+	background : #ffffff;
+}
+
+.sender {
+	background : #deebfd;
+}
+
+.receiver-div,
+.sender-div {
+	word-break : break-all;
+	width-max  : 100%;
+	margin     : 10px 0;
+}
+
+.receiver-div {
+	text-align : left;
+}
+
+.sender-div {
+	text-align : right;
+}
+
+/*
+**      ######################
+**      #                    #
+**      #     input block    #
+**      #                    #
+**      ######################
+*/
+.chat-input-div {
+	border           : 1px solid grey;
+	background-color : #fefefe;
+	box-shadow       : 0;
+	position         : absolute;
+	bottom           : 0;
+	padding          : 3px 8px 6px 8px;
+	display          : none;
+}
+
+.chat-input-div input,
+.chat-input-div input:focus {
+	padding    : 0;
+	margin     : 0;
+	height     : 16px !important;
+	border     : none !important;
+	box-shadow : none !important;
+	font-size  : 1rem !important;
+	outline    : 0 !important;
+}
+
+/*
+**      ########################
+**      #                      #
+**      # Friend list main div #
+**      #                      #
+**      ########################
+*/
+.friend-list {
+	border           : 1px solid #b7b8bb;
+	position         : fixed !important;
+	right            : 0;
+	top              : 51px;
+	min-height       : calc(100% - 51px) !important;
+	background-color : rgb(233, 234, 237);
+}
+
+@media only screen and (max-width : 32em) {
+	.friend-list {
+		border           : 1px solid red;
+		position         : fixed !important;
+		right            : 0;
+		top              : 51px;
+		min-height       : calc(100% - 51px) !important;
+		background-color : rgb(233, 234, 237);
+		paddding         : 0 0 0 20px;
+	}
+}
+
+.user-name-friend-list {
+	margin-top : 10px;
+}

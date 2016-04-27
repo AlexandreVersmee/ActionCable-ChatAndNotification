@@ -1,0 +1,26 @@
+<div class="panel <% if notif.status == 0 %>panel-info<% else %>panel-default<% end %>">
+  <div class="panel-body <% if notif.status == 0 %>panel-body-unread<% end %>">
+    <div class="col-lg-1 col-xs-1">
+      <a href="/users/<%= notif.notified_by %>">
+        <%= gravatar_for_id(notif.notified_by, size: 40) %>
+      </a>
+    </div>
+    <div class="col-lg-9 col-xs-9">
+      <p><%= notif.content %></p>
+    </div>
+    <div class="col-lg-1 col-xs-1 no-padding">
+      <% if notif.status == 0 %>
+          <%= form_for(notif) do |f| %>
+              <%= f.hidden_field :status, {:value => 0} %>
+              <%= f.hidden_field :id, {:value => notif.id} %>
+              <%= button_tag() do %>
+                  <i class='fa fa-check'></i>
+              <% end %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="col-lg-1 col-xs-1">
+      <%= link_to "<button><i class='fa fa-close'></i></button>".html_safe , notif, method: :delete, data: { confirm: "You sure ?" } %>
+    </div>
+  </div>
+</div>

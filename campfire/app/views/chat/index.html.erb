@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Chat</h1>
+  </div>
+</div>
+
+<h1> MON ID = <%= @user.id %> </h1>
+
+<div class="row">
+  <div class="col-lg-2 col-md-2 col-xs-2 friend-list no-padding">
+    <% i = 0 %>
+    <% @friends.each do |friend| %>
+        <%= render partial: "friend", locals: {friend: friend, value: i} %>
+        <% i = i+1 %>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<% if logged_in? %>
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-xs-1 friend-list">
+        <% get_user_chat_list %>
+        <% i = 0 %>
+        <% @friends.each do |friend| %>
+            <%= render partial: "chat/picture_username_template", locals: {friend: friend, value: i} %>
+            <% i = i+1 %>
+        <% end %>
+      </div>
+    </div>
+<% end %>
